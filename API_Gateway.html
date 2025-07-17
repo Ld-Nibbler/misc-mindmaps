@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-family: ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+.markmap-dark {
+  background: #27272a;
+  color: white;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.12/dist/style.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.12/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.12/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+              if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+                document.documentElement.classList.add("markmap-dark");
+              }
+            })(() => window.markmap,null,{"content":"<details><summary>API Gateway</summary><br><br>&#x41f;&#x43e; &#x43c;&#x43e;&#x442;&#x438;&#x432;&#x430;&#x43c;<br><a href=\"https://microservices.io/patterns/apigateway.html\">&#x44d;&#x442;&#x43e;&#x439; &#x441;&#x442;&#x430;&#x442;&#x44c;&#x438;</a></details>","children":[{"content":"&#x417;&#x430;&#x447;&#x435;&#x43c; &#x43d;&#x443;&#x436;&#x435;&#x43d;","children":[{"content":"fine-grained API","children":[{"content":"one client &gt; many MSs","children":[{"content":"&#x43c;&#x430;&#x440;&#x448;&#x440;&#x443;&#x442;&#x438;&#x437;&#x430;&#x446;&#x438;&#x44f; &#x437;&#x430;&#x43f;&#x440;&#x43e;&#x441;&#x43e;&#x432;","children":[],"payload":{"tag":"li","lines":"10,11"}}],"payload":{"tag":"li","lines":"9,11"}},{"content":"one request &gt; many MSs","children":[{"content":"&#x430;&#x433;&#x440;&#x435;&#x433;&#x430;&#x446;&#x438;&#x44f; &#x43e;&#x442;&#x432;&#x435;&#x442;&#x430;","children":[],"payload":{"tag":"li","lines":"12,13"}}],"payload":{"tag":"li","lines":"11,13"}}],"payload":{"tag":"li","lines":"8,13"}},{"content":"&#x440;&#x430;&#x437;&#x43d;&#x44b;&#x435; &#x43a;&#x43b;&#x438;&#x435;&#x43d;&#x442;&#x44b;:<br>Site, Android, IOs, other MSs","children":[{"content":"&#x440;&#x430;&#x437;&#x43d;&#x44b;&#x435; &#x441;&#x43a;&#x43e;&#x440;&#x43e;&#x441;&#x442;&#x438; &#x434;&#x43e;&#x441;&#x442;&#x443;&#x43f;&#x430;","children":[{"content":"&#x43c;&#x43e;&#x431;&#x438;&#x43b;&#x44c;&#x43d;&#x44b;&#x435; - &#x43c;&#x435;&#x434;&#x43b;&#x435;&#x43d;&#x43d;&#x44b;&#x435;","children":[],"payload":{"tag":"li","lines":"15,16"}},{"content":"LAN - &#x431;&#x44b;&#x441;&#x442;&#x440;&#x44b;&#x435;","children":[],"payload":{"tag":"li","lines":"16,17"}}],"payload":{"tag":"li","lines":"14,17"}}],"payload":{"tag":"li","lines":"13,17"}},{"content":"&#x440;&#x430;&#x437;&#x431;&#x438;&#x432;&#x43a;&#x430; &#x43d;&#x430; &#x441;&#x435;&#x440;&#x432;&#x438;&#x441;&#x44b; &#x43c;&#x43e;&#x436;&#x435;&#x442; &#x43c;&#x435;&#x43d;&#x44f;&#x442;&#x44c;&#x441;&#x44f;","children":[{"content":"&#x434;&#x43e;&#x43b;&#x436;&#x43d;&#x430; &#x431;&#x44b;&#x442;&#x44c; &#x441;&#x43a;&#x440;&#x44b;&#x442;&#x430; &#x43e;&#x442; &#x43a;&#x43b;&#x438;&#x435;&#x43d;&#x442;&#x430;","children":[],"payload":{"tag":"li","lines":"18,19"}}],"payload":{"tag":"li","lines":"17,19"}},{"content":"&#x440;&#x430;&#x437;&#x43d;&#x44b;&#x439; &#x441;&#x442;&#x435;&#x43a; &#x43f;&#x440;&#x43e;&#x442;&#x43e;&#x43a;&#x43e;&#x43b;&#x43e;&#x432; &#x443; MS","children":[{"content":"&#x41f;&#x440;&#x43e;&#x442;&#x43e;&#x43a;&#x43e;&#x43b;&#x44b;:","children":[{"content":"REST","children":[],"payload":{"tag":"li","lines":"21,22"}},{"content":"gRPC","children":[],"payload":{"tag":"li","lines":"22,23"}},{"content":"SOAP","children":[],"payload":{"tag":"li","lines":"23,24"}},{"content":"GraphQL","children":[],"payload":{"tag":"li","lines":"24,25"}},{"content":"Kafka","children":[],"payload":{"tag":"li","lines":"25,26"}},{"content":"... etc.","children":[],"payload":{"tag":"li","lines":"26,27"}}],"payload":{"tag":"li","lines":"20,27"}}],"payload":{"tag":"li","lines":"19,27"}},{"content":"&#x41c;&#x43e;&#x436;&#x435;&#x442; &#x440;&#x430;&#x431;&#x43e;&#x442;&#x430;&#x442;&#x44c; &#x43a;&#x430;&#x43a; &#x430;&#x434;&#x430;&#x43f;&#x442;&#x435;&#x440;:","children":[{"content":"&#x43f;&#x440;&#x438;&#x432;&#x435;&#x434;&#x435;&#x43d;&#x438;&#x435; &#x43e;&#x434;&#x43d;&#x43e;&#x43c;&#x443; &#x432;&#x445;&#x43e;&#x434;&#x443;:<br>(&#x432; &#x434;&#x430;&#x43d;&#x43d;&#x43e;&#x43c; &#x441;&#x43b;&#x443;&#x447;&#x430;&#x435; - REST)","children":[{"content":"REST &gt; SOAP","children":[],"payload":{"tag":"li","lines":"29,30"}},{"content":"REST &gt; gRPC","children":[],"payload":{"tag":"li","lines":"30,31"}},{"content":"REST &gt; ...","children":[],"payload":{"tag":"li","lines":"31,32"}}],"payload":{"tag":"li","lines":"28,32"}},{"content":"&#x43e;&#x434;&#x438;&#x43d; &#x432;&#x44b;&#x445;&#x43e;&#x434; &#x434;&#x43b;&#x44f; &#x440;&#x430;&#x437;&#x43d;&#x44b;&#x445; &#x432;&#x445;&#x43e;&#x434;&#x43e;&#x432;:<br>(&#x43a;&#x430;&#x43a; &#x432; Netflix)","children":[{"content":"GraphQL &gt; REST","children":[],"payload":{"tag":"li","lines":"33,34"}},{"content":"SOAP &gt; REST","children":[],"payload":{"tag":"li","lines":"34,35"}},{"content":"... &gt; REST","children":[],"payload":{"tag":"li","lines":"35,36"}}],"payload":{"tag":"li","lines":"32,36"}}],"payload":{"tag":"li","lines":"27,36"}},{"content":"&#x415;&#x434;&#x438;&#x43d;&#x44b;&#x439; &#x43a;&#x43e;&#x43d;&#x442;&#x440;&#x430;&#x43a;&#x442;<br>for everyone","children":[{"content":"&#x43e;&#x434;&#x438;&#x43d; Swagger","children":[],"payload":{"tag":"li","lines":"37,38"}}],"payload":{"tag":"li","lines":"36,38"}},{"content":"&#x410;&#x432;&#x442;&#x43e;&#x440;&#x438;&#x437;&#x430;&#x446;&#x438;&#x44f;","children":[{"content":"&#x441;&#x43e;&#x441;&#x440;&#x435;&#x434;&#x43e;&#x442;&#x430;&#x447;&#x438;&#x432;&#x430;&#x435;&#x442; &#x432; &#x441;&#x435;&#x431;&#x435;<br>&#x444;&#x443;&#x43d;&#x43a;&#x446;&#x438;&#x438; &#x431;&#x435;&#x437;&#x43e;&#x43f;&#x430;&#x441;&#x43d;&#x43e;&#x441;&#x442;&#x438; &#x434;&#x43e;&#x441;&#x442;&#x443;&#x43f;&#x430;","children":[],"payload":{"tag":"li","lines":"39,40"}},{"content":"&#x442;&#x43e;&#x447;&#x43a;&#x430; &#x432;&#x445;&#x43e;&#x434;&#x430; = &#x442;&#x43e;&#x447;&#x43a;&#x430; &#x430;&#x432;&#x442;&#x43e;&#x440;&#x438;&#x437;&#x430;&#x446;&#x438;&#x438;","children":[],"payload":{"tag":"li","lines":"40,41"}},{"content":"&#x43f;&#x435;&#x440;&#x435;&#x434;&#x430;&#x435;&#x442; <a href=\"https://microservices.io/patterns/security/access-token.html\">Access Token</a><br>&#x43c;&#x438;&#x43a;&#x440;&#x43e;&#x441;&#x435;&#x440;&#x432;&#x438;&#x441;&#x430;&#x43c; &#x432; &#x434;&#x43e;&#x43c;&#x435;&#x43d;&#x435;","children":[],"payload":{"tag":"li","lines":"41,44"}}],"payload":{"tag":"li","lines":"38,44"}}],"payload":{"tag":"h2","lines":"7,8"}},{"content":"&#x41a;&#x430;&#x43a; &#x440;&#x435;&#x430;&#x43b;&#x438;&#x437;&#x43e;&#x432;&#x430;&#x442;&#x44c;","children":[{"content":"event/driven reactive approach","children":[{"content":"&#x43b;&#x443;&#x447;&#x448;&#x435;&#x435; &#x440;&#x435;&#x448;&#x435;&#x43d;&#x438;&#x435;","children":[],"payload":{"tag":"li","lines":"47,48"}}],"payload":{"tag":"li","lines":"46,48"}},{"content":"JVM","children":[{"content":"Netty","children":[],"payload":{"tag":"li","lines":"49,50"}},{"content":"Spring Reactor","children":[],"payload":{"tag":"li","lines":"50,51"}}],"payload":{"tag":"li","lines":"48,51"}},{"content":"<a href=\"https://github.com/microservice-patterns/ftgo-application\">&#x43f;&#x440;&#x438;&#x43c;&#x435;&#x440; &#x440;&#x435;&#x430;&#x43b;&#x438;&#x437;&#x430;&#x446;&#x438;&#x438; Spring Cloud Gateway</a>","children":[{"content":"&#x437;&#x434;&#x435;&#x441;&#x44c; &#x43d;&#x435;&#x442; Swagger &#x434;&#x43b;&#x44f;<br>&#x43c;&#x438;&#x43a;&#x440;&#x43e;&#x441;&#x435;&#x440;&#x432;&#x438;&#x441;&#x430; API Gateway","children":[],"payload":{"tag":"li","lines":"52,54"}}],"payload":{"tag":"li","lines":"51,54"}}],"payload":{"tag":"h2","lines":"44,45"}},{"content":"Spring Cloud Gateway<br><font color=\"orange\">vs.</font><br>Regular Spring Boot App","children":[{"content":"<a href=\"Sys_Design_Patterns/API_Gateway/Spring_Cloud_Gateway.html\">ChatGPT explanations</a>","children":[],"payload":{"tag":"li","lines":"55,57"}}],"payload":{"tag":"h2","lines":"54,55"}},{"content":"&#x421;&#x432;&#x44f;&#x437;&#x430;&#x43d;&#x43d;&#x44b;&#x435; &#x43f;&#x430;&#x442;&#x442;&#x435;&#x440;&#x43d;&#x44b;","children":[{"content":"&#x434;&#x43b;&#x44f; &#x440;&#x43e;&#x443;&#x442;&#x438;&#x43d;&#x433;&#x430;:","children":[{"content":"<a href=\"https://microservices.io/patterns/client-side-discovery.html\">Client-Side Discovery pattern</a>","children":[],"payload":{"tag":"li","lines":"60,61"}},{"content":"<a href=\"https://microservices.io/patterns/server-side-discovery.html\">Server-Side Discovery pattern</a>","children":[],"payload":{"tag":"li","lines":"61,62"}}],"payload":{"tag":"li","lines":"59,62"}},{"content":"&#x43f;&#x440;&#x435;&#x434;&#x43e;&#x445;&#x440;&#x430;&#x43d;&#x438;&#x442;&#x435;&#x43b;&#x44c;:","children":[{"content":"<a href=\"https://microservices.io/patterns/reliability/circuit-breaker.html\">Circuit Breaker</a>","children":[],"payload":{"tag":"li","lines":"63,64"}}],"payload":{"tag":"li","lines":"62,64"}},{"content":"&#x430;&#x432;&#x442;&#x43e;&#x440;&#x438;&#x437;&#x430;&#x446;&#x438;&#x44f;:","children":[{"content":"<a href=\"https://microservices.io/patterns/security/access-token.html\">Access Token</a>","children":[],"payload":{"tag":"li","lines":"65,66"}}],"payload":{"tag":"li","lines":"64,66"}},{"content":"&#x43e;&#x431;&#x44a;&#x435;&#x434;&#x438;&#x43d;&#x435;&#x43d;&#x438;&#x435; (&#x43a;&#x43e;&#x43c;&#x43f;&#x43e;&#x437;&#x438;&#x446;&#x438;&#x44f;) API:","children":[{"content":"<a href=\"https://microservices.io/patterns/data/api-composition.html\">API Composition pattern</a>","children":[],"payload":{"tag":"li","lines":"67,68"}}],"payload":{"tag":"li","lines":"66,68"}}],"payload":{"tag":"h2","lines":"57,58"}}],"payload":{"tag":"h1","lines":"5,6"}},{"colorFreezeLevel":2})</script>
+</body>
+</html>
